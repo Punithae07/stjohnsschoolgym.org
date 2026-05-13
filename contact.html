@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact Us - St. John's Matriculation Higher Secondary School</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sofia&family=Salsa&family=Solway:wght@600&family=Luxurious+Roman&display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#1e2c7f",
+                        "secondary": "#6f2fa1",
+                        "accent-blue": "#1565c0",
+                        "accent": "#d81b60",
+                        "on-primary": "#ffffff",
+                        "background": "#eef3ff",
+                        "surface": "#ffffff",
+                        "surface-container": "#f3f6ff",
+                        "on-surface": "#121827",
+                        "on-surface-variant": "#5b647f",
+                        "outline": "#c8d3ff",
+                        "error": "#ba1a1a",
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.75rem",
+                        "lg": "1.25rem",
+                        "xl": "1.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "section-gap": "100px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Sofia", "sans-serif"],
+                        "body": ["Sofia", "sans-serif"],
+                        "accent": ["Sofia", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        :root {
+            color-scheme: light;
+        }
+
+        body {
+            font-family: 'Sofia', sans-serif;
+            background: #eef3ff;
+        }
+
+        .font-luxurious {
+            font-family: 'Luxurious Roman', serif;
+        }
+
+        .font-salsa {
+            font-family: 'Salsa', cursive;
+        }
+
+        .font-solway-600 {
+            font-family: 'Solway', serif;
+            font-weight: 600;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-headline {
+            font-family: 'Sofia', sans-serif;
+        }
+
+        .gradient-rose-purple {
+            background: linear-gradient(135deg, #1e2c7f 0%, #6f2fa1 100%);
+        }
+
+        .gradient-rose-blue {
+            background: linear-gradient(135deg, #1e2c7f 0%, #1565c0 100%);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.16);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+        }
+
+        .footer-wave {
+            position: absolute;
+            top: -90px;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,192L48,208C96,224,192,256,288,256C384,256,480,224,576,192C672,160,768,128,864,122.7C960,117,1056,139,1152,160C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: 1440px 120px;
+            animation: wave-move 18s linear infinite;
+        }
+
+        @keyframes wave-move {
+            0% {
+                background-position-x: 0;
+            }
+
+            100% {
+                background-position-x: 1440px;
+            }
+        }
+
+        .premium-shadow {
+            box-shadow: 0 30px 70px -35px rgba(30, 44, 127, 0.28);
+        }
+
+        .form-input {
+            @apply w-full bg-white/50 border border-outline/30 rounded-xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body overflow-x-hidden">
+    <!-- Top Info Bar -->
+    <div
+        class="gradient-rose-purple text-on-primary py-3 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center text-[13px] font-medium relative z-[60] gap-4">
+        <span class="uppercase tracking-[0.28em] text-sm font-semibold">Welcome to Our School</span>
+        <div class="flex flex-wrap items-center gap-4 justify-end">
+            <a class="bg-white/10 hover:bg-white/20 transition-colors rounded-full px-4 py-2 flex items-center gap-2 shadow-sm"
+                href="#">
+                <span class="material-symbols-outlined text-[18px]">payments</span>
+                Online Fee Payment
+            </a>
+        </div>
+    </div>
+    <!-- Main Branding Header -->
+    <header class="py-4 px-margin-mobile md:px-margin-desktop border-b border-outline/10 relative"
+        style="background-image: url('assets/header-bg.jpg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-gradient-to-r from-purple-900/70 via-purple-600/50 to-purple-900/70"></div>
+        <div
+            class="max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+            <!-- Left Logo -->
+            <div class="flex-shrink-0">
+                <img alt="School Left Logo" class="w-24 h-24 md:w-32 md:h-32 object-contain"
+                    src="assets/left-logo.png" />
+            </div>
+
+            <!-- Center Content -->
+            <div class="flex-1 text-center max-w-xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-5xl font-bold text-white leading-tight font-salsa">ST. JOHN'S
+                    MATRICULATION</h1>
+                <p
+                    class="text-sm sm:text-base md:text-lg tracking-[0.2em] uppercase mt-2 font-solway-600 font-semibold text-white">
+                    Higher Secondary School</p>
+                <p class="text-sm sm:text-base text-purple-100 font-solway-600 font-semibold uppercase">Gudiyattam
+                </p>
+            </div>
+
+            <!-- Right Logo -->
+            <div class="flex-shrink-0">
+                <img alt="School Right Logo" class="w-24 h-24 md:w-32 md:h-32 object-contain"
+                    src="assets/right-logo.png" />
+            </div>
+        </div>
+    </header>
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 w-full z-50 gradient-rose-purple shadow-xl font-luxurious">
+        <div
+            class="max-w-container-max mx-auto flex items-center justify-between px-margin-mobile md:px-margin-desktop h-16">
+            <div class="hidden lg:flex items-center gap-8" id="desktopNav">
+                <a class="text-white/80 hover:text-white transition-colors text-sm tracking-wide"
+                    href="index.html">Home</a>
+                <div class="relative group">
+                    <button id="desktopAboutToggle" type="button"
+                        class="inline-flex items-center gap-1 text-white/85 hover:text-white transition-colors text-sm tracking-wide focus:outline-none">
+                        About Us
+                        <span class="material-symbols-outlined text-[18px] transition-transform duration-200">expand_more</span>
+                    </button>
+                    <div id="desktopAboutSubmenu"
+                        class="hidden lg:absolute lg:group-hover:block lg:top-full lg:left-0 lg:mt-3 lg:min-w-[220px] lg:rounded-3xl lg:border lg:border-white/10 lg:bg-white/95 lg:shadow-2xl lg:backdrop-blur-xl lg:py-3 lg:text-slate-900 lg:pointer-events-none lg:group-hover:pointer-events-auto lg:transition-opacity lg:duration-200">
+                        <a class="block px-5 py-2 text-sm text-slate-700 hover:text-primary hover:bg-slate-100"
+                            href="#">Our History</a>
+                        <a class="block px-5 py-2 text-sm text-slate-700 hover:text-primary hover:bg-slate-100"
+                            href="#">Principal’s Message</a>
+                        <a class="block px-5 py-2 text-sm text-slate-700 hover:text-primary hover:bg-slate-100"
+                            href="#">Campus & Facilities</a>
+                    </div>
+                </div>
+                <a class="text-white/85 hover:text-white transition-colors text-sm tracking-wide" href="#">Academics</a>
+                <a class="text-white/80 hover:text-white transition-colors text-sm tracking-wide"
+                    href="#">Management</a>
+                <a class="text-white/80 hover:text-white transition-colors text-sm tracking-wide"
+                    href="#">Admissions</a>
+                <a class="text-white/80 hover:text-white transition-colors text-sm tracking-wide"
+                    href="#">Gallery</a>
+                <a class="text-white font-semibold border-b-2 border-white pb-1 text-sm tracking-[0.2em] uppercase" href="contact.html">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="text-white p-2 hover:bg-white/10 rounded-full transition-colors">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+                <button id="navToggle" class="lg:hidden text-white p-2 hover:bg-white/10 rounded-full transition-colors"
+                    aria-expanded="false" aria-label="Toggle navigation menu">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-purple-950/95 px-margin-mobile md:px-margin-desktop">
+            <ul class="flex flex-col gap-3 py-4">
+                <li><a class="block text-white/90 hover:text-white text-sm tracking-wide" href="index.html">Home</a></li>
+                <li>
+                    <button id="mobileAboutToggle" type="button"
+                        class="w-full flex items-center justify-between text-white/90 hover:text-white text-sm tracking-wide py-3 border-b border-white/10 focus:outline-none">
+                        About Us
+                        <span class="material-symbols-outlined transition-transform duration-200">expand_more</span>
+                    </button>
+                    <ul id="mobileAboutSubmenu" class="hidden flex-col gap-2 mt-2 pl-4">
+                        <li><a class="block text-white/80 hover:text-white text-sm" href="#">Our History</a></li>
+                        <li><a class="block text-white/80 hover:text-white text-sm" href="#">Principal’s Message</a></li>
+                        <li><a class="block text-white/80 hover:text-white text-sm" href="#">Campus & Facilities</a></li>
+                    </ul>
+                </li>
+                <li><a class="block text-white/90 hover:text-white text-sm tracking-wide" href="#">Academics</a></li>
+                <li><a class="block text-white/90 hover:text-white text-sm tracking-wide" href="#">Management</a></li>
+                <li><a class="block text-white/90 hover:text-white text-sm tracking-wide" href="#">Admissions</a></li>
+                <li><a class="block text-white/90 hover:text-white text-sm tracking-wide" href="#">Gallery</a></li>
+                <li><a class="block text-white/90 hover:text-white text-sm tracking-wide font-bold" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Section -->
+    <section class="relative py-24 md:py-32 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/contact-bg.png" alt="Contact Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/80 mix-blend-multiply"></div>
+        </div>
+        <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+            <h2 class="text-5xl md:text-7xl font-bold text-white mb-6 font-salsa">Contact Us</h2>
+            <nav class="flex justify-center items-center gap-3 text-white/80 text-lg">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+                <span class="text-white font-medium">Contact Us</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Contact Info & Form -->
+    <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <!-- Left Column: Contact Info -->
+            <div class="space-y-12">
+                <div class="space-y-6">
+                    <h3 class="text-4xl font-bold text-primary">Get In Touch</h3>
+                    <p class="text-lg text-on-surface-variant leading-relaxed">
+                        Have questions or need more information about our school? We're here to help. Reach out to us through any of the following channels or fill out the form.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Address -->
+                    <div class="bg-white p-8 rounded-3xl shadow-xl border border-outline/10 group hover:border-primary/30 transition-all">
+                        <div class="w-14 h-14 gradient-rose-purple text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">location_on</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-on-surface mb-3">Our Location</h4>
+                        <p class="text-on-surface-variant leading-relaxed">
+                            Nellore Pettai, Gudiyattam,<br />Vellore Dist, Tamil Nadu - 632602
+                        </p>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="bg-white p-8 rounded-3xl shadow-xl border border-outline/10 group hover:border-primary/30 transition-all">
+                        <div class="w-14 h-14 gradient-rose-blue text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">call</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-on-surface mb-3">Phone Number</h4>
+                        <p class="text-on-surface-variant leading-relaxed">
+                            <a href="tel:04171223395" class="hover:text-primary transition-colors">04171-223395</a>
+                        </p>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="bg-white p-8 rounded-3xl shadow-xl border border-outline/10 group hover:border-primary/30 transition-all">
+                        <div class="w-14 h-14 gradient-rose-purple text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">mail</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-on-surface mb-3">Email Address</h4>
+                        <p class="text-on-surface-variant leading-relaxed">
+                            <a href="mailto:stjohnsmhss1969@gmail.com" class="hover:text-primary transition-colors">stjohnsmhss1969@gmail.com</a>
+                        </p>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="bg-white p-8 rounded-3xl shadow-xl border border-outline/10 group hover:border-primary/30 transition-all">
+                        <div class="w-14 h-14 gradient-rose-blue text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">schedule</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-on-surface mb-3">Office Hours</h4>
+                        <p class="text-on-surface-variant leading-relaxed">
+                            Mon - Sat: 9:00 AM - 4:00 PM<br />
+                            Sunday: Closed
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Form -->
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-2xl border border-outline/10 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 gradient-rose-purple opacity-5 -translate-y-1/2 translate-x-1/2 rounded-full"></div>
+                
+                <h3 class="text-3xl font-bold text-on-surface mb-8">Send Us a Message</h3>
+                
+                <form action="#" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-on-surface-variant ml-1">Full Name</label>
+                            <input type="text" placeholder="John Doe" class="w-full bg-surface-container/50 border border-outline/30 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-on-surface-variant ml-1">Email Address</label>
+                            <input type="email" placeholder="john@example.com" class="w-full bg-surface-container/50 border border-outline/30 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-on-surface-variant ml-1">Subject</label>
+                        <input type="text" placeholder="General Inquiry" class="w-full bg-surface-container/50 border border-outline/30 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-on-surface-variant ml-1">Message</label>
+                        <textarea rows="5" placeholder="Your message here..." class="w-full bg-surface-container/50 border border-outline/30 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full gradient-rose-purple text-white font-bold py-5 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-95 transition-all uppercase tracking-widest text-sm flex items-center justify-center gap-3">
+                        <span class="material-symbols-outlined">send</span>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="h-[500px] w-full relative">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m1m!1m1m!1m1m!1m1m!1m1m!1m1m!1m1m!1m1m!1m1m!1m1m!1m1m!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad37d3632f05eb%3A0x6a0c4f83b1a1a5b!2sSt.John's%20Matriculation%20Higher%20Secondary%20School!5e0!3m2!1sen!2sin!4v1715617200000!5m2!1sen!2sin" 
+            class="w-full h-full border-0" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative gradient-rose-purple text-white pt-24 pb-12 overflow-hidden">
+        <div class="footer-wave"></div>
+        <div
+            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 relative z-10">
+            <div class="space-y-6">
+                <div class="flex items-center gap-3">
+                    <img alt="School Logo Footer" class="w-50 h-50"
+                        src="assets/left-logo.png" />
+                    
+                </div>
+                <p class="text-white/70 text-sm leading-relaxed font-light">Established in 1969, we are dedicated to
+                    providing premium education with spiritual grounding for a brighter society.</p>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-2xl font-bold border-b-2 border-white/20 pb-2 inline-block">Quick Links</h4>
+                <ul class="space-y-3 text-lg text-white/70">
+                    <li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span
+                                class="material-symbols-outlined text-[16px]">chevron_right</span> About Institution</a>
+                    </li>
+                    <li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span
+                                class="material-symbols-outlined text-[16px]">chevron_right</span> Academic Calendar</a>
+                    </li>
+                    <li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span
+                                class="material-symbols-outlined text-[16px]">chevron_right</span> Admission Process</a>
+                    </li>
+                    <li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span
+                                class="material-symbols-outlined text-[16px]">chevron_right</span> Student
+                            Activities</a></li>
+                    <li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span
+                                class="material-symbols-outlined text-[16px]">chevron_right</span> Photo Gallery</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-2xl font-bold border-b-2 border-white/20 pb-2 inline-block">Resources</h4>
+                <ul class="space-y-3 text-lg text-white/70">
+                    <li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span
+                                class="material-symbols-outlined text-[16px]">chevron_right</span> Online Fee
+                            Payment</a></li>
+                    <li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span
+                                class="material-symbols-outlined text-[16px]">chevron_right</span> Examination
+                            Results</a></li>
+                    <li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span
+                                class="material-symbols-outlined text-[16px]">chevron_right</span> Download
+                            Prospectus</a></li>
+                    <li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span
+                                class="material-symbols-outlined text-[16px]">chevron_right</span> Alumni Network</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-2xl font-bold border-b-2 border-white/20 pb-2 inline-block">Contact Info</h4>
+                <div class="space-y-4 text-base text-white/70">
+                    <div class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary-light">location_on</span>
+                        <p>Nellore Pettai, Gudiyattam,<br />Vellore Dist, Tamil Nadu - 632602</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary-light">call</span>
+                        <p>04171-223395</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary-light">mail</span>
+                        <p>stjohnsmhss1969@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-20 pt-8 border-t border-white/10 text-center relative z-10 px-margin-mobile">
+            <p class="text-xs font-solway-600 text-white/50 tracking-widest ">© 2026 St. John’s Gudiyatham. All rights reserved. Powered by <a href="">Boscosoft Technologies</a>.</p>
+        </div>
+    </footer>
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileAboutToggle = document.getElementById('mobileAboutToggle');
+        const mobileAboutSubmenu = document.getElementById('mobileAboutSubmenu');
+
+        navToggle?.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.toggle('hidden');
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+            const icon = navToggle.querySelector('.material-symbols-outlined');
+            if (icon) {
+                icon.textContent = isOpen ? 'close' : 'menu';
+            }
+        });
+
+        mobileAboutToggle?.addEventListener('click', () => {
+            mobileAboutSubmenu?.classList.toggle('hidden');
+            const icon = mobileAboutToggle.querySelector('.material-symbols-outlined');
+            icon?.classList.toggle('rotate-180');
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) {
+                mobileMenu?.classList.add('hidden');
+                mobileAboutSubmenu?.classList.add('hidden');
+                navToggle?.setAttribute('aria-expanded', 'false');
+                const icon = navToggle?.querySelector('.material-symbols-outlined');
+                if (icon) icon.textContent = 'menu';
+            }
+        });
+    </script>
+</body>
+
+</html>
