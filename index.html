@@ -6,7 +6,7 @@
     <title>St. John's Matriculation Higher Secondary School</title>
     <!-- Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Sofia&family=Salsa&family=Solway:wght@600&family=Luxurious+Roman&display=swap"
         rel="stylesheet" />
     <!-- Icons -->
     <link
@@ -47,8 +47,8 @@
                         "section-gap": "100px"
                     },
                     "fontFamily": {
-                        "headline": ["Playfair Display", "serif"],
-                        "body": ["Poppins", "sans-serif"],
+                        "headline": ["Sofia", "sans-serif"],
+                        "body": ["Sofia", "sans-serif"],
                         "accent": ["Sofia", "sans-serif"]
                     },
                 },
@@ -61,8 +61,21 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Sofia', sans-serif;
             background: #eef3ff;
+        }
+
+        .font-luxurious {
+            font-family: 'Luxurious Roman', serif;
+        }
+
+        .font-salsa {
+            font-family: 'Salsa', cursive;
+        }
+
+        .font-solway-600 {
+            font-family: 'Solway', serif;
+            font-weight: 600;
         }
 
         h1,
@@ -70,7 +83,9 @@
         h3,
         h4,
         .font-headline {
-            font-family: 'Playfair Display', serif;
+            font-family: '
+ ', sans-serif;
+
         }
 
         .gradient-rose-purple {
@@ -151,7 +166,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(circle at 50% 20%, rgba(255,255,255,0.3), transparent 40%);
+            background: radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.3), transparent 40%);
         }
 
         .premium-shadow {
@@ -209,11 +224,55 @@
                 transform: translateY(0);
             }
         }
-    </style></head>
+
+        .vision-mission-section {
+            position: relative;
+            background: radial-gradient(circle at 10% 20%, rgba(30, 44, 127, 0.18), transparent 30%),
+                        radial-gradient(circle at 90% 10%, rgba(111, 47, 161, 0.16), transparent 24%),
+                        linear-gradient(180deg, #eef3ff 0%, #dfe8ff 100%);
+            overflow: hidden;
+        }
+
+        .vision-mission-particles {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .vision-mission-particle {
+            position: absolute;
+            width: var(--size, 10px);
+            height: var(--size, 10px);
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 9999px;
+            filter: blur(0.4px);
+            opacity: 0.85;
+            transform: translate3d(0, 0, 0);
+            animation: particle-move var(--duration, 12s) linear infinite;
+        }
+
+        @keyframes particle-move {
+            0% {
+                transform: translate3d(0, 0, 0);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translate3d(var(--x, 0px), var(--y, 45px), 0);
+                opacity: 0.55;
+            }
+            100% {
+                transform: translate3d(0, 0, 0);
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
 
 <body class="bg-background text-on-surface font-body overflow-x-hidden">
     <!-- Top Info Bar -->
-    <div class="gradient-rose-purple text-on-primary py-3 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center text-[13px] font-medium relative z-[60] gap-4">
+    <div
+        class="gradient-rose-purple text-on-primary py-3 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center text-[13px] font-medium relative z-[60] gap-4">
         <span class="uppercase tracking-[0.28em] text-sm font-semibold">Welcome to Our School</span>
         <div class="flex flex-wrap items-center gap-4 justify-end">
             <a class="bg-white/10 hover:bg-white/20 transition-colors rounded-full px-4 py-2 flex items-center gap-2 shadow-sm"
@@ -224,22 +283,28 @@
         </div>
     </div>
     <!-- Main Branding Header -->
-    <header class="py-8 px-margin-mobile md:px-margin-desktop border-b border-outline/10 relative" style="background-image: url('assets/header-bg.jpg'); background-size: cover; background-position: center;">
+    <header class="py-4 px-margin-mobile md:px-margin-desktop border-b border-outline/10 relative"
+        style="background-image: url('assets/header-bg.jpg'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-gradient-to-r from-purple-900/70 via-purple-600/50 to-purple-900/70"></div>
-        <div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+        <div
+            class="max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
             <!-- Left Logo -->
             <div class="flex-shrink-0">
                 <img alt="School Left Logo" class="w-24 h-24 md:w-32 md:h-32 object-contain"
                     src="assets/left-logo.png" />
             </div>
-            
+
             <!-- Center Content -->
             <div class="flex-1 text-center">
-                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight font-headline">ST. JOHN'S MATRICULATION</h1>
-                <p class="text-sm md:text-base text-purple-200 font-bold tracking-[0.2em] uppercase mt-2">Higher Secondary School</p>
-                <p class="text-sm md:text-base text-purple-100 font-semibold uppercase">Gudiyattam</p>
+                <h1 class="text-6xl md:text-4xl lg:text-5xl font-bold text-white leading-tight font-salsa">ST. JOHN'S
+                    MATRICULATION</h1>
+                <p
+                    class="text-xl md:text-xl font-bold font-solway-600 font-bold tracking-[0.2em] font-solway-600 uppercase mt-2">
+                    Higher Secondary School</p>
+                <p class="text-base md:text-base text-purple-100 font-solway-600  font-semibold uppercase">Gudiyattam
+                </p>
             </div>
-            
+
             <!-- Right Logo -->
             <div class="flex-shrink-0">
                 <img alt="School Right Logo" class="w-24 h-24 md:w-32 md:h-32 object-contain"
@@ -248,18 +313,34 @@
         </div>
     </header>
     <!-- Navigation Bar -->
-    <nav class="sticky top-0 w-full z-50 gradient-rose-purple shadow-xl">
+    <nav class="sticky top-0 w-full z-50 gradient-rose-purple shadow-xl font-luxurious">
         <div
             class="max-w-container-max mx-auto flex items-center justify-between px-margin-mobile md:px-margin-desktop h-16">
-            <div class="flex space-x-8">
-                <a class="text-white font-semibold border-b-2 border-white pb-1 text-sm tracking-[0.2em] uppercase" href="#">Home</a>
-                <a class="text-white/85 hover:text-white transition-colors text-sm tracking-wide" href="#">About Us</a>
+            <div class="hidden lg:flex items-center gap-8" id="desktopNav">
+                <a class="text-white font-semibold border-b-2 border-white pb-1 text-sm tracking-[0.2em] uppercase"
+                    href="#">Home</a>
+                <div class="relative group">
+                    <button id="desktopAboutToggle" type="button"
+                        class="inline-flex items-center gap-1 text-white/85 hover:text-white transition-colors text-sm tracking-wide focus:outline-none">
+                        About Us
+                        <span class="material-symbols-outlined text-[18px] transition-transform duration-200">expand_more</span>
+                    </button>
+                    <div id="desktopAboutSubmenu"
+                        class="hidden lg:absolute lg:group-hover:block lg:top-full lg:left-0 lg:mt-3 lg:min-w-[220px] lg:rounded-3xl lg:border lg:border-white/10 lg:bg-white/95 lg:shadow-2xl lg:backdrop-blur-xl lg:py-3 lg:text-slate-900 lg:pointer-events-none lg:group-hover:pointer-events-auto lg:transition-opacity lg:duration-200">
+                        <a class="block px-5 py-2 text-sm text-slate-700 hover:text-primary hover:bg-slate-100"
+                            href="#">Our History</a>
+                        <a class="block px-5 py-2 text-sm text-slate-700 hover:text-primary hover:bg-slate-100"
+                            href="#">Principal’s Message</a>
+                        <a class="block px-5 py-2 text-sm text-slate-700 hover:text-primary hover:bg-slate-100"
+                            href="#">Campus & Facilities</a>
+                    </div>
+                </div>
                 <a class="text-white/85 hover:text-white transition-colors text-sm tracking-wide" href="#">Academics</a>
-                <a class="hidden lg:block text-white/80 hover:text-white transition-colors text-sm tracking-wide"
+                <a class="text-white/80 hover:text-white transition-colors text-sm tracking-wide"
                     href="#">Management</a>
-                <a class="hidden lg:block text-white/80 hover:text-white transition-colors text-sm tracking-wide"
+                <a class="text-white/80 hover:text-white transition-colors text-sm tracking-wide"
                     href="#">Admissions</a>
-                <a class="hidden md:block text-white/80 hover:text-white transition-colors text-sm tracking-wide"
+                <a class="text-white/80 hover:text-white transition-colors text-sm tracking-wide"
                     href="#">Gallery</a>
                 <a class="text-white/80 hover:text-white transition-colors text-sm tracking-wide" href="#">Contact</a>
             </div>
@@ -267,62 +348,127 @@
                 <button class="text-white p-2 hover:bg-white/10 rounded-full transition-colors">
                     <span class="material-symbols-outlined">search</span>
                 </button>
-                <button class="lg:hidden text-white p-2">
+                <button id="navToggle" class="lg:hidden text-white p-2 hover:bg-white/10 rounded-full transition-colors"
+                    aria-expanded="false" aria-label="Toggle navigation menu">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
         </div>
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-purple-950/95 px-margin-mobile md:px-margin-desktop">
+            <ul class="flex flex-col gap-3 py-4">
+                <li><a class="block text-white/90 hover:text-white text-sm tracking-wide" href="#">Home</a></li>
+                <li>
+                    <button id="mobileAboutToggle" type="button"
+                        class="w-full flex items-center justify-between text-white/90 hover:text-white text-sm tracking-wide py-3 border-b border-white/10 focus:outline-none">
+                        About Us
+                        <span class="material-symbols-outlined transition-transform duration-200">expand_more</span>
+                    </button>
+                    <ul id="mobileAboutSubmenu" class="hidden flex-col gap-2 mt-2 pl-4">
+                        <li><a class="block text-white/80 hover:text-white text-sm" href="#">Our History</a></li>
+                        <li><a class="block text-white/80 hover:text-white text-sm" href="#">Principal’s Message</a></li>
+                        <li><a class="block text-white/80 hover:text-white text-sm" href="#">Campus & Facilities</a></li>
+                    </ul>
+                </li>
+                <li><a class="block text-white/90 hover:text-white text-sm tracking-wide" href="#">Academics</a></li>
+                <li><a class="block text-white/90 hover:text-white text-sm tracking-wide" href="#">Management</a></li>
+                <li><a class="block text-white/90 hover:text-white text-sm tracking-wide" href="#">Admissions</a></li>
+                <li><a class="block text-white/90 hover:text-white text-sm tracking-wide" href="#">Gallery</a></li>
+                <li><a class="block text-white/90 hover:text-white text-sm tracking-wide" href="#">Contact</a></li>
+            </ul>
+        </div>
     </nav>
     <!-- Hero Banner Section -->
-    <section class="relative h-[650px] overflow-hidden">
-        <img alt="School Hero Image" class="w-full h-full object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyl21OxPV3bdH-AgMqdnMQ5Ldty4LlPRyfRIUg5x4qJIyGAy5zR4fZqQDlWyCJetCAG6YX-UVa2eA5Fz0vgyZxrq93LP1cpJPdEsX4G5kIAXtcNhft_xbj6C80hmQkIPM13gg3gtEBJaxLVy98LtG5sVH8eew1Lin7qnYSoB9BUpOgkeD71Bj5u-cjsxY8hGtK7tr5zoJDIdYuEyUC8x2vvee_uBTZfCzpej3AK-S6nPHwcZvNpkyyQrtuD-T6zzKyJfYNtaigYAk" />
+    <section class="relative h-[650px] overflow-hidden font-luxurious">
+        <img alt="School Hero Image" class="w-full h-full object-cover" src="assets/slider01.jpg" />
         <div
             class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent flex items-center px-margin-mobile md:px-margin-desktop">
-            <div class="max-w-3xl text-on-primary space-y-6 fade-up delay-200">
-                <span
-                    class="inline-block bg-primary px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-[0.22em] shadow-xl">Legacy of 50+ Years</span>
-                <h2 class="text-5xl md:text-7xl font-bold leading-[1.05]">Nurturing Minds, <br /><span
-                        class="text-secondary italic">Empowering</span> Futures.</h2>
-                <p class="text-lg md:text-xl font-light opacity-90 max-w-xl">Imparting holistic education to create a
-                    just and new society since 1969. Join the journey of excellence at St. John's.</p>
-                <div class="flex flex-wrap gap-4 pt-4">
-                    <button
-                        class="bg-primary text-white px-10 py-4 rounded-full font-bold shadow-2xl hover:scale-105 transition-all flex items-center gap-2">
-                        Start Admission 2024-25 <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-                    </button>
-                    <button
-                        class="bg-white text-primary px-10 py-4 rounded-full font-bold hover:bg-surface-container transition-all">
-                        Explore Our Story
-                    </button>
-                </div>
-            </div>
+
         </div>
     </section>
     <!-- Flash News Ticker -->
     <div class="ticker-wrap shadow-md">
         <div class="ticker py-3">
-            <span class="flex items-center text-primary font-semibold text-sm">
+            <span class="flex items-center text-primary font-semibold text-lg">
                 <span
-                    class="gradient-rose-purple text-white text-[10px] px-3 py-1 rounded-full uppercase mr-6 font-black tracking-widest">Update</span>
+                    class="gradient-rose-purple text-white text-[15px] px-3 py-1 rounded-full uppercase mr-6 font-black tracking-widest">Update</span>
                 Admissions Open for Academic Year 2024-25. Apply now to secure your child's future.
-                <span class="mx-12 opacity-30 text-2xl">•</span>
+                <span class="mx-12 opacity-30 text-3xl">•</span>
                 Recent Achievement: 94% Pass Percentage in 12th Board Exams.
-                <span class="mx-12 opacity-30 text-2xl">•</span>
+                <span class="mx-12 opacity-30 text-3xl">•</span>
                 New Digital Library Wing Inaugurated for Enhanced Learning.
-                <span class="mx-12 opacity-30 text-2xl">•</span>
+                <span class="mx-12 opacity-30 text-3xl">•</span>
                 Annual Sports Day Scheduled for February 15th.
             </span>
         </div>
     </div>
+    <!-- About & Founder -->
+    <section
+        class="py-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-24">
+        <!-- About School -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+            <div class="md:col-span-7 order-2 md:order-1 space-y-8">
+                <h3 class="text-4xl font-bold tracking-widest 
+                    text-label-lg">About Our <span
+                        class="text-tertiary-fixed-variant">Institution</span></h3>
+                <p class="text-lg text-on-surface-variant leading-relaxed">
+                    St John’s Matriculation Higher Secondary School, Gudiyattam is run by the Society of the Sisters of St. Anne, Chennai. Started in 1969, it functions with the Vision and Mission of the Congregation and imparts Holistic Education to create a New and Just Society. Imparting quality education and relevance to the marginalized sections of society.
+                </p>
+                <a class="inline-flex items-center gap-2 text-priary text-lg font-bold hover:gap-4 transition-all" href="#">
+                   Know More <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+            <div class="md:col-span-5 order-1 md:order-2">
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 bg-secondary-fixed/20 rounded-xl blur-xl group-hover:bg-secondary-fixed/30 transition-all">
+                    </div>
+                    <img class="relative rounded-xl shadow-xl w-full"
+                        data-alt="A scenic photograph of the St. John's Matriculation school building"
+                        src="assets/about-1.jpg" />
+                </div>
+            </div>
+        </div>
+        <!-- Our Founder -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+            <div class="md:col-span-5">
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 bg-primary/10 rounded-xl blur-xl group-hover:bg-primary/20 transition-all">
+                    </div>
+                    <img class="relative rounded-xl shadow-xl w-full"
+                        data-alt="An interior shot of the school's heritage hall featuring a dignified portrait"
+                        src="assets/about-2.jpg" />
+                </div>
+            </div>
+            <div class="md:col-span-7 space-y-8">
+                <h3 class="text-4xl font-headline-lg text-primary">
+                    Our Founder </h3>
+                <p class="text-lg text-on-surface-variant leading-relaxed">
+                  St John’s Matriculation Higher Secondary School, Gudiyattam is run by the Society of the Sisters of St. Anne, Chennai. Started in 1969, it functions with the Vision and Mission of the Congregation and imparts Holistic Education to create a New and Just Society. Imparting quality education and relevance to the marginalized sections of society.            </p>
+            
+                <a class="inline-flex items-center gap-2 text-priary text-lg font-bold hover:gap-4 transition-all" href="#">
+                   Know More <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
     <!-- Vision, Mission, Motto Cards -->
-    <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <section class="vision-mission-section py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <div class="vision-mission-particles">
+            <span class="vision-mission-particle" style="--size: 8px; top: 12%; left: 14%; --x: 18px; --y: 52px; --duration: 14s; animation-delay: -2s;"></span>
+            <span class="vision-mission-particle" style="--size: 6px; top: 22%; left: 78%; --x: -24px; --y: 38px; --duration: 11s; animation-delay: -4s;"></span>
+            <span class="vision-mission-particle" style="--size: 10px; top: 44%; left: 34%; --x: 22px; --y: 60px; --duration: 13s; animation-delay: -1s;"></span>
+            <span class="vision-mission-particle" style="--size: 9px; top: 65%; left: 18%; --x: -16px; --y: 48px; --duration: 10s; animation-delay: -3s;"></span>
+            <span class="vision-mission-particle" style="--size: 7px; top: 72%; left: 68%; --x: 20px; --y: 42px; --duration: 12s; animation-delay: -5s;"></span>
+            <span class="vision-mission-particle" style="--size: 12px; top: 35%; left: 88%; --x: -28px; --y: 54px; --duration: 15s; animation-delay: -6s;"></span>
+            <span class="vision-mission-particle" style="--size: 14px; top: 80%; left: 42%; --x: 24px; --y: 34px; --duration: 16s; animation-delay: -2s;"></span>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Vision -->
             <div class="relative h-[380px] rounded-3xl overflow-hidden group premium-shadow">
                 <img alt="Vision"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY8Y_ljsiVo4RmpsiVFLy4GoSm7EhkXl7Gu6nfUN43xPwSTywUZnzo7v5wFrQ1zjaNAUaNCoAT20TN_ErUhoYBRXmRRdlQP9FFRdAz8tGITG--29EVjIx-XwRiLp5n4makciCa-I4BH2f4Xyn_te3HgvPT--Gi0PuekqDEHgI07n10dG4VRsDT3fkCUWzU39e4g3_F9tgEowjH4NPO5TU709RMXVOlIhqUUGGFgsTKvFJMf1gHETGPoZh0cwfVJvTOC9aBKZYThYA" />
+                    src="assets/vision.jpg" />
                 <div
                     class="absolute inset-0 gradient-rose-purple-40 opacity-0 group-hover:opacity-100 transition-opacity">
                 </div>
@@ -332,8 +478,8 @@
                         class="w-14 h-14 gradient-rose-purple rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl">
                         <span class="material-symbols-outlined text-2xl">visibility</span>
                     </div>
-                    <h4 class="text-2xl font-bold mb-2">Our Vision</h4>
-                    <p class="text-sm opacity-90 leading-relaxed">To empower students with holistic education rooted in
+                    <h4 class="text-4xl font-bold mb-2">Our Vision</h4>
+                    <p class="text-lg opacity-90 leading-relaxed">To empower students with holistic education rooted in
                         spiritual values and academic excellence.</p>
                 </div>
             </div>
@@ -341,7 +487,7 @@
             <div class="relative h-[380px] rounded-3xl overflow-hidden group premium-shadow">
                 <img alt="Mission"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIDI3PURAqauE7hQmNQhZuzrvxsRhsPM8BGg3Jx85qeZFMu3X-iPDgnCVj6KwhNrJwoKxWf3mNVRKjO9agN-MH0fJbT-gHuybeIeavfSsE5QV5Jv17X0kFsLU6P9IV61UUs1Zjmf368wbsY4xJs5Dix2d0NJh_fYcSUllriKIcDbd7lrmAOQ1p1i_1sliT5el9PlvUCTdLlWu5ebIxB0cKF1tU1rSS5t_Gd_4QcFgdHVVmnn2EWAPNsEfZ9XpmpY90lOSHuN76G7Q" />
+                    src="assets/mission.jpg" />
                 <div
                     class="absolute inset-0 gradient-rose-blue-40 opacity-0 group-hover:opacity-100 transition-opacity">
                 </div>
@@ -351,8 +497,8 @@
                         class="w-14 h-14 gradient-rose-blue rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl">
                         <span class="material-symbols-outlined text-2xl">target</span>
                     </div>
-                    <h4 class="text-2xl font-bold mb-2">Our Mission</h4>
-                    <p class="text-sm opacity-90 leading-relaxed">Providing quality education accessible to all,
+                    <h4 class="text-4xl font-bold mb-2">Our Mission</h4>
+                    <p class="text-lg opacity-90 leading-relaxed">Providing quality education accessible to all,
                         fostering critical thinking and character building.</p>
                 </div>
             </div>
@@ -360,7 +506,7 @@
             <div class="relative h-[380px] rounded-3xl overflow-hidden group premium-shadow">
                 <img alt="Motto"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSFNDmV0Cvn3UpmJaFec3XkJ65vMZ1gBZjkCQbmf2e26K56jOuwwmMG4eiDyJ-WLynv5REKjErsT5ZaLW6Zj8cmhEreRQywp4C5OVesRVe4EiaO_2RsAeSBq6cvfGbAJLJgGqGOqmwQgS9giLyLbVdM6gA-6iQ_NMTIuCu7vRJlDpFuXAhF-i65QT4xt50kvSnrQ7SKOIRANDB0VFccH3EB6Pr9MsbnWWceWUe2Jo5hEGUTYrTeq2Lg1vJsrM-iKZJvlvRYG-mScY" />
+                    src="assets/motto.jpg" />
                 <div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div
                     class="absolute inset-x-4 bottom-4 p-8 glass-panel rounded-2xl text-white text-center transform translate-y-2 group-hover:translate-y-0 transition-transform">
@@ -368,27 +514,11 @@
                         class="w-14 h-14 gradient-rose-purple rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl">
                         <span class="material-symbols-outlined text-2xl">verified</span>
                     </div>
-                    <h4 class="text-2xl font-bold mb-2">Our Motto</h4>
-                    <p class="text-sm opacity-90 leading-relaxed">Love, Service, and Excellence in every step of our
+                    <h4 class="text-4xl font-bold mb-2">Our Motto</h4>
+                    <p class="text-lg opacity-90 leading-relaxed">Love, Service, and Excellence in every step of our
                         educational journey for a better world.</p>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Middle Header Section (Activities Intro) -->
-    <section class="relative py-32 overflow-hidden flex items-center justify-center text-center px-margin-mobile">
-        <div class="absolute inset-0 z-0">
-            <img alt="Activities Background" class="w-full h-full object-cover opacity-30"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuByNDixaSFawySfxJXMCrN8MVMfKTHPjmHmGS_QdJVa5Uo8ipKu9UVMWOgs4rkuX3v3ssz4pQbulEjyabMQSHV12nHS_SrKWSn-1JSZiLgNSNQ1K0zTBNZ1o42D0bRmukbhWpBnChAUeMdnl6uHseR6DQUxH8WrmA4HOVMQZCiB7_7ihxHby6f_h0BIBZJ_vgi-s4BOKGGb1sb5YStX5jX2Zz1ccpLMzT5meJNN8hNwlt-_oiFBKZfUHcy3mrbjbSzl82DA8N2xBmo" />
-            <div class="absolute inset-0 gradient-rose-blue mix-blend-multiply opacity-80"></div>
-        </div>
-        <div class="relative z-10 max-w-4xl text-white space-y-6">
-            <h3 class="text-4xl md:text-6xl font-bold">Beyond the Classroom</h3>
-            <p class="text-xl opacity-80 max-w-2xl mx-auto font-light">We believe in a 360-degree development approach,
-                where sports, arts, and culture are as vital as academic curriculum.</p>
-            <button
-                class="bg-white text-primary px-8 py-3 rounded-full font-bold shadow-xl hover:bg-opacity-90 transition-all uppercase tracking-widest text-xs">Explore
-                Student Life</button>
         </div>
     </section>
     <!-- Activities & News -->
@@ -403,13 +533,13 @@
                 <div class="relative group rounded-3xl overflow-hidden shadow-2xl">
                     <img alt="Sports Meet"
                         class="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-[1.5s]"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkqQZ22NRHeYY_0tCsku31t1haqBerQ6KJ_HhxcENtzPX_5ZrkFUAj1XTRv7UGIxpl4tQFa48WfZs-XsqANI3sLVaBoOg8s363T4Cum_wALUh0g3WF4GguxT0FkPAUf8akhEbPfw4IhVWPmskODEzakb582XW_MaBi1MOQ8BYTL2QNndu0v07Nf6rxEcXYcnknIFmA9Ct0oncOvtDUllZ4jDripJ9wU0tNcMEsQqkokpnaYzat_x7SNjzw-5hMwPB0QkuRUTC3GqM" />
+                        src="assets/activity.jpeg" />
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-10">
-                        <h4 class="text-3xl font-bold text-white mb-2">Annual Sports Meet</h4>
+                        <h4 class="text-4xl font-bold text-white mb-2">Annual Sports Meet</h4>
                         <p class="text-white/70 text-lg">Nurturing physical strength, teamwork, and spirit of healthy
                             competition.</p>
-                        <a class="text-primary font-bold mt-6 flex items-center gap-2 hover:translate-x-2 transition-transform"
+                        <a class="text-white font-bold mt-6 flex items-center gap-2 hover:translate-x-2 transition-transform"
                             href="#">
                             See All Activities <span class="material-symbols-outlined">arrow_right_alt</span>
                         </a>
@@ -420,7 +550,7 @@
             <div class="space-y-10">
                 <div class="flex items-center gap-4">
                     <div class="w-12 h-1 bg-secondary"></div>
-                    <h3 class="text-3xl font-bold text-secondary">Latest Announcements</h3>
+                    <h3 class="text-4xl font-bold text-secondary">Latest Announcements</h3>
                 </div>
                 <div class="space-y-6">
                     <!-- News 1 -->
@@ -428,15 +558,15 @@
                         class="flex gap-6 p-6 bg-white rounded-2xl hover:shadow-xl transition-all border border-outline/5 group">
                         <div class="w-24 h-24 rounded-xl overflow-hidden shrink-0">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfQgLMvXvY4sKrxagiYTknwnT0QbZSzYkHSnFVyq2ZqDydyR8CBrtHUlW0KNtJ01DFtMq63qPR-MDETDmjMtkAE7B4YA3mcKo0VkTGhmJq5RFlMjR3Uu-8XZvm29OZzqGBpxnhIFZP9CD_SXawzJeCfoz5N7MrCdYMwlFwyH-KS3Y8vsSACpdzM1CovGs5Kcma_6_qoA7LmeTQc1B01TGLux2bgxmBaGlJPgLxNt03ZpyQ1lV9FWWNtK1d3hVB7j70r7XNWwiUYv4" />
+                                src="assets/vision.jpg" />
                         </div>
                         <div>
                             <span class="text-primary font-bold text-[11px] uppercase tracking-widest">06 NOV
                                 2023</span>
                             <h5
-                                class="text-lg font-bold text-on-surface mt-1 group-hover:text-primary transition-colors">
+                                class="text-xl font-bold text-on-surface mt-1 group-hover:text-primary transition-colors">
                                 Tour Programme - Wayanad</h5>
-                            <p class="text-sm text-on-surface-variant line-clamp-2 mt-2 leading-relaxed">Educational
+                            <p class="text-base text-on-surface-variant line-clamp-2 mt-2 leading-relaxed">Educational
                                 tour organized for higher secondary students to explore nature.</p>
                         </div>
                     </div>
@@ -445,15 +575,15 @@
                         class="flex gap-6 p-6 bg-white rounded-2xl hover:shadow-xl transition-all border border-outline/5 group">
                         <div class="w-24 h-24 rounded-xl overflow-hidden shrink-0">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCW-lCjVtHR6C6mVY7Z78RwWT4A0Lxzg41U2A0v9uZiWgoOueQG9z3T21ruq-wf0A0uMOZbjr4z4uzCqmk6WxTVfNuLhbGHJ8hVhVAnBEjDIinomLwd13Ro8zapODO16ZzIS76EzNEIMp_PtRnF3pkHL-OXUhRFHXnA5sn3VHNN-d2_BWocqduvmpWOA8KabIPvF8A1Tl72eJDC0kzr2YrTH1xP2iCJPQL6exQZkWCnLLiK785kyIpZG2MTULRefbLSlT34_ColwA" />
+                                src="assets/news01.jpg" />
                         </div>
                         <div>
                             <span class="text-primary font-bold text-[11px] uppercase tracking-widest">17 JUL
                                 2023</span>
                             <h5
-                                class="text-lg font-bold text-on-surface mt-1 group-hover:text-primary transition-colors">
+                                class="text-xl font-bold text-on-surface mt-1 group-hover:text-primary transition-colors">
                                 Re-open day Celebration</h5>
-                            <p class="text-sm text-on-surface-variant line-clamp-2 mt-2 leading-relaxed">Welcoming
+                            <p class="text-base text-on-surface-variant line-clamp-2 mt-2 leading-relaxed">Welcoming
                                 students back for a new academic year with festivities.</p>
                         </div>
                     </div>
@@ -462,15 +592,15 @@
                         class="flex gap-6 p-6 bg-white rounded-2xl hover:shadow-xl transition-all border border-outline/5 group">
                         <div class="w-24 h-24 rounded-xl overflow-hidden shrink-0">
                             <img class="w-full h-full object-cover group-hover:scale-110 transition-transform"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_-Rp_cRI0YJHS4wECVLE61IhFQoN8mB5krcqF98Pt7tsEPol6hcawhEF7cuOIqNvrNIJAe81Ukvx8SQd8jueexXwaH_xhTC7DD61sRtNSBPLH8qSicJ68TudwXx59Vj26oE_40RKCDU1DBcBFydRLMi5xfpqSOAMUMJLixGUyxbQW6BbHprgDmQG3pvp1vJSTSoZxPv1qd6FX6ODFvTB_kNOE_LmjVjEkidE4D5b3lT29I4arExe7nyyVj7vijRtM5sB63KncWf4" />
+                                src="assets/news01.jpg" />
                         </div>
                         <div>
                             <span class="text-primary font-bold text-[11px] uppercase tracking-widest">10 JUN
                                 2023</span>
                             <h5
-                                class="text-lg font-bold text-on-surface mt-1 group-hover:text-primary transition-colors">
+                                class="text-xl font-bold text-on-surface mt-1 group-hover:text-primary transition-colors">
                                 Inter-school Sports Victory</h5>
-                            <p class="text-sm text-on-surface-variant line-clamp-2 mt-2 leading-relaxed">Our athletes
+                            <p class="text-base text-on-surface-variant line-clamp-2 mt-2 leading-relaxed">Our athletes
                                 brought home 5 gold medals from zonal level.</p>
                         </div>
                     </div>
@@ -487,35 +617,24 @@
         </div>
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
             <div class="text-center mb-16">
-                <h3 class="text-4xl font-bold text-white mb-4">Leadership Voice</h3>
+                <h3 class="text-4xl font-bold text-white mb-4">Our Management</h3>
                 <div class="w-24 h-1 bg-white/30 mx-auto"></div>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <!-- Principal -->
                 <div
                     class="bg-white/10 backdrop-blur-md p-10 rounded-[2rem] border border-white/20 flex flex-col md:flex-row gap-8 items-center text-white">
-                    <img alt="Principal" class="w-32 h-32 rounded-2xl object-cover ring-4 ring-white/20"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB810SjI8rldAy_6HtDM2uvYRvq2mmkeQAzsPSjxA37yr987mHo8BSCgVuGy7-is8lFdzTOKOHg2gvIAwHrjvozVvLAtxJlAmq0SLqtxvKyFfQtVUO0h_gctprInMcK8cj3VfNF5LFn7F9wnoKL_oFA6MmRDZX7iooUDaldMcNZhmbbbSxFX3AzWogLTUXP25gIzbtGvPAN-txemyPwL73E_hdE03rQcmUdSGE42fCreNnHe7bfht-U7gToGym_xpN4a-ZOK_SNjRA" />
-                    <div class="space-y-4">
-                        <h4 class="text-2xl font-bold">Principal's Message</h4>
-                        <p class="text-sm opacity-80 leading-relaxed font-light">"We strive to foster an environment
-                            where every student feels valued and empowered to reach their full potential. At St. John's,
-                            we combine traditional values with modern learning methods."</p>
-                        <button class="text-white font-bold hover:underline flex items-center gap-2">Read More <span
-                                class="material-symbols-outlined text-sm">open_in_new</span></button>
-                    </div>
+                    <img alt="Principal" class="w-full max-w-[280px] h-auto rounded-2xl object-cover ring-4 ring-white/20"
+                        src="assets/our-mangement.jpg" />
+                   
                 </div>
                 <!-- Management -->
                 <div
                     class="bg-white/10 backdrop-blur-md p-10 rounded-[2rem] border border-white/20 flex flex-col md:flex-row gap-8 items-center text-white">
-                    <img alt="Management" class="w-32 h-32 rounded-2xl object-cover ring-4 ring-white/20"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBltKsx0gSPUZ3nRzijYf7A9plZIUk63KMszmadMVMlmqG2rhawLKfEH-FJUEnjS3ESUBn4m1ZtSK0ggH33K4QgxqsFzDly3qlKM7onc3QlBiF87E0ZHiEj-dSt-5APlANud0DPJjqQ5aEeh6wKqX9aKw0_xCq3juWA4NHmawhD8SrAUHFN35qj_8NBeqrv02Zew56Ya2WJDhwQbpPDX7RT4BFNGGUra4wTRjRJatIMBqdCUOKeEAEGXeNrXTH84z58Jsj-nhFiD8I" />
-                    <div class="space-y-4">
-                        <h4 class="text-2xl font-bold">Management Voice</h4>
-                        <p class="text-sm opacity-80 leading-relaxed font-light">"Our commitment is to provide the best
-                            facilities and infrastructure to support the growth of our students. We are dedicated to
-                            creating a legacy of excellence in education."</p>
-                        <button class="text-white font-bold hover:underline flex items-center gap-2">Read More <span
+                    <div>
+                        <h4 class="text-4xl font-bold">Principal Message</h4>
+                        <p class="text-xl opacity-80 leading-relaxed font-light">"St John’s Matriculation Higher Secondary School, Gudiyattam is run by the Society of the Sisters of St. Anne, Chennai. Started"</p>
+                        <button class="text-white text-lg font-bold hover:underline flex items-center gap-2">Read More <span
                                 class="material-symbols-outlined text-sm">open_in_new</span></button>
                     </div>
                 </div>
@@ -526,11 +645,10 @@
     <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <!-- Toppers -->
-            <div class="lg:col-span-8 space-y-12">
+            <div class="lg:col-span-6 space-y-12">
                 <div class="flex justify-between items-end">
                     <div>
-                        <h3 class="text-4xl font-bold text-on-surface">Academic <span class="text-primary">Hall of
-                                Fame</span></h3>
+                        <h3 class="text-4xl font-bold text-on-surface">School<span class="text-primary"> Toppers</span></h3>
                         <p class="text-on-surface-variant mt-2">Celebrating our brilliant achievers of Class 12th.</p>
                     </div>
                     <div class="flex gap-3">
@@ -552,15 +670,7 @@
                             class="absolute top-0 right-0 gradient-rose-purple text-white px-6 py-2 rounded-bl-3xl font-bold text-xs">
                             RANK 01</div>
                         <div class="flex items-center gap-6">
-                            <img alt="Topper 1" class="w-24 h-24 rounded-2xl object-cover ring-4 ring-primary/10"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdJchZT-XdBN5WCAGeKz5hHB6hsv3xSjum4Fv83St8wn21NqHmKViDKV-lUEPDNRhA29g56XJYIB60Tr76FUNx2cYEATC7UB77Seb1Pu-Est7xUjWstkQkHhC2mL62IQBCoGXbVcjqtfRmSobnBNDXie-u2VIdF-EfNe_J5cVQl62huzH-uMhD9QvBu-kKTNkqRpMF88UfGDbvmQ_icHqOHWOu-zMuZMNX8ZZJ31jG7aGeSyLx78Xl_EGfsGQl8nyc01B-EyN_1p4" />
-                            <div>
-                                <h4 class="text-xl font-bold text-on-surface">SRIMATHI. S</h4>
-                                <p class="text-3xl font-bold text-primary mt-1">554/600</p>
-                                <span
-                                    class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mt-2 block">Class
-                                    12th</span>
-                            </div>
+                           <img src="assets/slider01.jpg" alt="">
                         </div>
                     </div>
                     <!-- Topper 2 -->
@@ -570,35 +680,20 @@
                             class="absolute top-0 right-0 gradient-rose-blue text-white px-6 py-2 rounded-bl-3xl font-bold text-xs">
                             RANK 02</div>
                         <div class="flex items-center gap-6">
-                            <img alt="Topper 2" class="w-24 h-24 rounded-2xl object-cover ring-4 ring-accent-blue/10"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCInFz6i_fwLKmiAR2FcIIHXnS1ZRtRdDhdfJxO3ZmbUGPA50aNH462M-nPL_LJmV0Bw-hBTuuzRQMGXl0MtFG-Hf6sGj_8f80XzDkdctCjW8wn-XH4N-NWsDIFcZD2RNb5Zz7-kFZvObh1uOVwUhl8K7UDTL92e9F3FsWhJpqiJ_zLAiIIGmHdhyIK334z68Xn3woc22kQ9IqHbZyPQqfWezRazQ3LltJzA03YOkKtLpOy2kicUqw5NLyCd90PEHwNf8gswCFUXbM" />
-                            <div>
-                                <h4 class="text-xl font-bold text-on-surface">PURVISHA. K</h4>
-                                <p class="text-3xl font-bold text-accent-blue mt-1">546/600</p>
-                                <span
-                                    class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mt-2 block">Class
-                                    12th</span>
-                            </div>
+                            <img src="assets/slider02.jpg" alt="">
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Birthdays -->
             <div
-                class="lg:col-span-4 bg-surface-container/50 rounded-[3rem] p-10 border-2 border-dashed border-primary/20 text-center flex flex-col justify-center">
+                class="lg:col-span-6 bg-surface-container/50 rounded-[3rem] p-10 border-2 border-dashed border-primary/20 text-center flex flex-col justify-center">
                 <h3 class="text-3xl font-bold text-primary mb-8">Birthday <br />Celebrants</h3>
                 <div class="flex justify-center -space-x-6 mb-8">
-                    <img alt="Birthday 1" class="w-20 h-20 rounded-full border-4 border-white object-cover shadow-lg"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD778soADFDbzveBPnPJFbP6M8KkNBRk28i_GInWADMPuycXb6HSneuEjz3DkMQXRnOzyaofIajPOPJ_5oKzFuaC1D_puJQw7efeP8BFBvMg5451DLwMCq3RaGn7C_9GoeU-NGOYmpmu396JM_XmwH2ogPajdJB8FP0fwSstWP2HkBQmJFwAxv51KGZuLIsqjVShhjOonyB1aiij1UthB5ML08enyMBBSPStsHQOCi8c9CYAB9Jc_B9WbU-B1HmMP5NK36hG6Ssyss" />
-                    <img alt="Birthday 2"
-                        class="w-24 h-24 rounded-full border-4 border-white object-cover shadow-xl relative z-10"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJVRxYaG6u8DIQ1Z21OR15YqLG2nXifgF4QOxzdyilR3ptvTJEJeG2McANz9uBMJrI79QF2EC_h9_S9a_ktmSfVFTT_nbSQU_F1mH6IWQQREyyTqYszm0xCmRze7yJqIX9jYTsenRNfasgGlpvn0JzF8o2uas9vn2PwhDhwNsKZmxVH7AidjdEnIaTyX1m0QuNXvBitUx7nigMKg3GAn_FKbqzhXDqjEPUfiOpi9yfMYZTLcd2zPgk87j_gACQw_CbGuwjWL63_5Q" />
-                    <img alt="Birthday 3" class="w-20 h-20 rounded-full border-4 border-white object-cover shadow-lg"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKvsVIrGchsjZQRd-5JNSB2_4PzPze4Pl60a6clLfspvQnHIowOAjLsvftrcqPnvr2HMBfxIIPzjfD3oXqcWAvvsHW6WG0YOlQzX-1_lRQ-VQwrP5qZYQMwE-biRknAmDU4IeuhODgm0EbRv73Th8HDSae3XG95Ad1mnqEulh7bhRYvoa1NkRgXK-vwNXJdcbl1gCk-Adko1vVKKUAtnGOpIFiztAXt6vf3eP1TouvQigon22nlNZ6lvd0DLi88ZdBCbb5ArjoCSg" />
+                    <img alt="Birthday 1" class="w-50 h-50 rounded-20 border-4 border-white object-cover shadow-lg"
+                        src="assets/birthday01.jpg" />
                 </div>
                 <p class="text-2xl font-bold text-on-surface mb-2">Happy Birthday!</p>
-                <p class="text-sm text-on-surface-variant leading-relaxed">Wishing all our students born this week a
-                    year filled with wisdom, joy, and bright futures.</p>
             </div>
         </div>
     </section>
@@ -615,7 +710,7 @@
                 <span class="material-symbols-outlined text-4xl">format_quote</span>
             </div>
             <h3 class="text-sm font-black text-primary uppercase tracking-[0.4em] mb-6">Thought For The Day</h3>
-            <blockquote class="text-4xl md:text-6xl font-bold italic text-on-surface leading-tight mb-10">
+            <blockquote class="text-4xl md:text-5xl font-bold italic text-on-surface leading-tight mb-10">
                 “Don’t Judge Your Future On Your Past”
             </blockquote>
             <div class="flex items-center justify-center gap-4">
@@ -640,52 +735,46 @@
             <div class="group relative overflow-hidden rounded-2xl shadow-lg">
                 <img alt="Gallery image"
                     class="w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjx7ONCB0-OYBk5BULw1pyDtCEXLIcVCtqF1X_xoIcM03VGIHllNPEMqVoCB608IIcnA0oB3NIBr-IboOYiFMi2K_mNAEw1HWQB9LpG2U2AtKcumlhHSJjf3rcRUmT4HDDdXOnX5Nc5wWy3cSFr5XMWt7Lmo1VYGzONuLBNMB-GXjQYdz3Vw3V8GwDvqqRig1grs_5Y5GyHic1fpUq51D3ix4hfLr7KNmoww10SD6b78mt4ODZ5NBAKgVnQKg2gD4lC7ReJLJjU9Y" />
+                    src="assets/gallery01.jpg" />
                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
             <div class="group relative overflow-hidden rounded-2xl shadow-lg">
                 <img alt="Gallery image"
                     class="w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLOjYxwho0KMHg16CHcKNaU5RsIoW6bUJcLczMahWs88Rwy-JT0nYF_GCiTxhuTNDw5yKeaOckAz7HcT3yYV_LocORdGmMKRSTPh978icXeS_0sTPjd5OmgljLm4xByGo5SEJMKWCjICIcL7XqYJJ8atp2y6hbqzyarUNgfr8SHi7GVkN4mx1BqR_Geg3wkFsov81d5WX38Rur6Tw12iwUSMdPuJlW0N7qz8wd7w5y_-PqRCvQ3IGvgiwLSQmTesI_-lRsBFuUKD4" />
+                    src="assets/gallery02.jpg" />
                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
             <div class="group relative overflow-hidden rounded-2xl shadow-lg">
                 <img alt="Gallery image"
                     class="w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpYsYXA5ls7T-RZ5w9Pk2TARic-4lJWSUE_x4JjpCXdIFAfrUgQo7OAlFD2DqJqpkJLAb4L-kqRIDzQ2XS0KByLBl0Yi-8tFgr3PjRh_9-HjUlrj_ggP4pCSCrmDE_QgvbIOR25NIeDssAveA87u8PaY4nz2TioA3y4KSLXK12BecbHlD2h232UHoGOO8D4YjAZscyudCjKrnArLSkMpyllEsWTST5MtFkjenQkc9Cb1vO3IejmZJpwT0OZSO3XaXdFuTdtPTGMBw" />
+                    src="assets/gallery03.jpg" />
                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
             <div class="group relative overflow-hidden rounded-2xl shadow-lg">
                 <img alt="Gallery image"
                     class="w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg7WJYSV2SU-Ans8GmAafg3hDKYrvKNZbI-D23jRmwFeJTxRAtNK4akxkwsOsUvQ8P2U6HRwF1hfPN_nLy707gl9HN646dk6xot5m1MWAzziWO_tZscO5LxkU1ypoF4y8CdV_Ml9GSpd4b_PL_dt8B4uyI2pdwp_UTJezzn6BHvyLYEbLrpOESvrqhWWDnWwxvWSjdZOt0c3V5uJJiIXxjjqkYdbiB1gfHYrjd3jC6ym-h2kw0R-JyK1TbP5FoU_dcpdHaT2j-pKQ" />
+                    src="assets/gallery04.jpg" />
                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
         </div>
     </section>
     <!-- Footer -->
-    <footer class="relative mt-32 gradient-rose-purple text-white pt-24 pb-12 overflow-hidden">
+    <footer class="relative mt-5 gradient-rose-purple text-white pt-24 pb-12 overflow-hidden">
         <div class="footer-wave"></div>
         <div
             class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 relative z-10">
             <div class="space-y-6">
                 <div class="flex items-center gap-3">
-                    <img alt="School Logo Footer" class="w-12 h-12 brightness-0 invert"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWZbsSdUg0YbDKXQxGRv3ONYEmfSzp2W5JNvlqHrWB97zgx8V1Qf8aCVKqEpwp3aTlHBziwly4fDS9AlkvtVf-A2yKhK9s8N90Ghz2CuJnJ88hG8ZPUPlnfDn5vKi4emcP5r-d_u3osUAmwi77a8AgrKbRj1nX5pp0oSactZjDrYWOYlUYE5flq27IPHgi-nBe8rztzW-YmJN76AiNitfgaWJnXALWuvcV2KzRUpNgxiUuHjXfJ2ZTxCC0V4BYTmQ4q17RXNSlanY" />
-                    <h4 class="text-xl font-bold">St. John's MHSS</h4>
+                    <img alt="School Logo Footer" class="w-50 h-50"
+                        src="assets/left-logo.png" />
+                    
                 </div>
                 <p class="text-white/70 text-sm leading-relaxed font-light">Established in 1969, we are dedicated to
                     providing premium education with spiritual grounding for a brighter society.</p>
-                <div class="flex gap-4">
-                    <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all"
-                        href="#"><span class="material-symbols-outlined text-[20px]">facebook</span></a>
-                    <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all"
-                        href="#"><span class="material-symbols-outlined text-[20px]">share</span></a>
-                </div>
             </div>
             <div class="space-y-6">
-                <h4 class="text-lg font-bold border-b-2 border-white/20 pb-2 inline-block">Quick Links</h4>
-                <ul class="space-y-3 text-sm text-white/70">
+                <h4 class="text-2xl font-bold border-b-2 border-white/20 pb-2 inline-block">Quick Links</h4>
+                <ul class="space-y-3 text-lg text-white/70">
                     <li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span
                                 class="material-symbols-outlined text-[16px]">chevron_right</span> About Institution</a>
                     </li>
@@ -704,8 +793,8 @@
                 </ul>
             </div>
             <div class="space-y-6">
-                <h4 class="text-lg font-bold border-b-2 border-white/20 pb-2 inline-block">Resources</h4>
-                <ul class="space-y-3 text-sm text-white/70">
+                <h4 class="text-2xl font-bold border-b-2 border-white/20 pb-2 inline-block">Resources</h4>
+                <ul class="space-y-3 text-lg text-white/70">
                     <li><a class="hover:text-white transition-colors flex items-center gap-2" href="#"><span
                                 class="material-symbols-outlined text-[16px]">chevron_right</span> Online Fee
                             Payment</a></li>
@@ -721,8 +810,8 @@
                 </ul>
             </div>
             <div class="space-y-6">
-                <h4 class="text-lg font-bold border-b-2 border-white/20 pb-2 inline-block">Contact Info</h4>
-                <div class="space-y-4 text-sm text-white/70">
+                <h4 class="text-2xl font-bold border-b-2 border-white/20 pb-2 inline-block">Contact Info</h4>
+                <div class="space-y-4 text-base text-white/70">
                     <div class="flex gap-3">
                         <span class="material-symbols-outlined text-primary-light">location_on</span>
                         <p>Nellore Pettai, Gudiyattam,<br />Vellore Dist, Tamil Nadu - 632602</p>
@@ -739,10 +828,40 @@
             </div>
         </div>
         <div class="mt-20 pt-8 border-t border-white/10 text-center relative z-10 px-margin-mobile">
-            <p class="text-xs text-white/50 tracking-widest uppercase">© 2024 St. John's Matriculation Higher Secondary
-                School. All Rights Reserved.</p>
+            <p class="text-xs font-solway-600 text-white/50 tracking-widest ">© 2026 St. John’s Gudiyatham. All rights reserved. Powered by <a href="">Boscosoft Technologies</a>.</p>
         </div>
     </footer>
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileAboutToggle = document.getElementById('mobileAboutToggle');
+        const mobileAboutSubmenu = document.getElementById('mobileAboutSubmenu');
+
+        navToggle?.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.toggle('hidden');
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+            const icon = navToggle.querySelector('.material-symbols-outlined');
+            if (icon) {
+                icon.textContent = isOpen ? 'close' : 'menu';
+            }
+        });
+
+        mobileAboutToggle?.addEventListener('click', () => {
+            mobileAboutSubmenu?.classList.toggle('hidden');
+            const icon = mobileAboutToggle.querySelector('.material-symbols-outlined');
+            icon?.classList.toggle('rotate-180');
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) {
+                mobileMenu?.classList.add('hidden');
+                mobileAboutSubmenu?.classList.add('hidden');
+                navToggle?.setAttribute('aria-expanded', 'false');
+                const icon = navToggle?.querySelector('.material-symbols-outlined');
+                if (icon) icon.textContent = 'menu';
+            }
+        });
+    </script>
 </body>
 
 </html>

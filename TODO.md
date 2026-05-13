@@ -1,0 +1,6 @@
+- [ ] Update index.html: import Google Fonts (Salsa, Solway wght 600, Luxurious Roman)
+- [ ] Update Tailwind config / CSS fontFamily mappings (headline/body as needed)
+- [x] Apply Salsa to Middle Header title ("Beyond the Classroom")
+- [x] Apply Solway 600 to Middle Header subheading paragraph
+- [x] Apply Luxurious Roman to Menu and Hero section
+- [ ] Smoke test by opening index.html in browser
